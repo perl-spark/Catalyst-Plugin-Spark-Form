@@ -1,10 +1,9 @@
-package Catalyst::Plugin::Spark::Form;
-
-# A simple plugin to make forms accessible quickly off the CTX.
-
-# $Id:$
 use strict;
 use warnings;
+
+package Catalyst::Plugin::Spark::Form;
+
+# ABSTRACT: A simple plug-in to make forms accessible quickly off the CTX.
 
 use Moose::Role;
 use namespace::autoclean;
@@ -36,20 +35,18 @@ sub form {
   my ( $ctx, $name, @args ) = @_;
 
   if ($name) {
-    my @result = $c->_comp_search_prefixes( $name, qw/Form F/ );
+    my @result = $ctx->_comp_search_prefixes( $name, qw/Form F/ );
     if ( ref $name ) {
-      return map { $c->_filter_component( $_, @args ) } @result;
+      return map { $ctx->_filter_component( $_, @args ) } @result;
     }
-    return $c->_filter_component( $result[0], @args );
+    return $ctx->_filter_component( $result[0], @args );
   }
 
-  return $c->component( $c->action->class );
+  return $ctx->component( $ctx->action->class );
 
 }
 
-__PACKAGE__->meta->make_immutable;
-
-no Moose;
+no Moose::Role;
 
 =head1 CREDITS
 
