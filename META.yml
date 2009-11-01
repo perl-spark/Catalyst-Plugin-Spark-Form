@@ -1,0 +1,22 @@
+---
+abstract: 'A simple plug-in to make forms accessible quickly off the CTX.'
+author:
+  - 'Kent Fredric <kentnl@cpan.org>'
+generated_by: 'Dist::Zilla version 1.092930'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Catalyst-Plugin-Spark-Form
+provides:
+  Catalyst::Plugin::Spark::Form:
+    file: lib/Catalyst/Plugin/Spark/Form.pm
+    version: 0.01000001
+requires:
+  Catalyst::Runtime: 5.80004
+  Moose: 0.92
+  Spark::Form: 0.2102
+  namespace::autoclean: 0.09
+resources:
+  repository: http://github.com/kentfredric/Catalyst-Plugin-Spark-Form
+version: 0.01000001
