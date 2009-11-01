@@ -6,7 +6,7 @@ package Catalyst::Plugin::Spark::Form;
 use strict;
 use warnings;
 
-use Moose;
+use Moose::Role;
 use namespace::autoclean;
 
 =head1 SYNOPSIS
@@ -47,6 +47,10 @@ sub form {
 
 }
 
+__PACKAGE__->meta->make_immutable;
+
+no Moose;
+
 =head1 CREDITS
 
 Code thrown together by James Laver L<http://jameslaver.com>.
@@ -62,5 +66,4 @@ The code mightn't work, but its not my fault if it doesn't. Will gladly accept p
 =cut
 
 1;
-
 
