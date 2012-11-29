@@ -46,6 +46,7 @@ Revision history for {{$dist->name}}
  - migrate author tests to xt/
  - Using DZIL4 instead of DZIL1
  - replace guts of dist.ini with bundle.
+ - Bugtracker/Sources now point to perl-spark project.
 
  [Tests::Author::New]
  - xt/author/critic.t
