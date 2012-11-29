@@ -1,0 +1,21 @@
+do{ my $x = {
+       'build_requires' => {
+                             'Test::More' => '0.98',
+                             'File::Find' => 0,
+                             'File::Temp' => 0,
+                             'Module::Build' => '0.4003'
+                           },
+       'conflicts' => {},
+       'requires' => {
+                       'warnings' => 0,
+                       'Moose::Role' => 0,
+                       'namespace::autoclean' => '0.09',
+                       'perl' => '5.006',
+                       'strict' => 0,
+                       'Catalyst::Runtime' => '5.80004',
+                       'Spark::Form' => '0.2102',
+                       'Moose' => '0.92'
+                     },
+       'recommends' => {}
+     };
+$x; }
