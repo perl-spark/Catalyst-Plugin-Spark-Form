@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.01000002 2012-11-29T18:58:09Z
  - distribution maintenance release, no user visible changes.
 
  [Dependencies::New  / test requires]
